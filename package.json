@@ -5,9 +5,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest --verbose --watchAll"
+    "test": "jest --verbose --watchAll --coverage"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "jest": "^27.4.7",
     "vite": "^2.7.2"
   },
