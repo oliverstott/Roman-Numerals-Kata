@@ -1,9 +1,12 @@
+function numberToRomanNumeral() {
+  return 'I';
+}
+
+
 describe("romanNumerals", () => {
-  it("register roman numerals function", () => {
-    const numberToRomanNumeral = () => {
-      describe("numberToRomanNumeral", () => {
-        expect(numberToRomanNumeral(1)).toEqual("I");
-      });
-    };
+  describe("numberToRomanNumeral", () => {
+    it('converts 1 to I', () => {
+      expect(numberToRomanNumeral(1)).toEqual('I');
+    });
   });
 });
