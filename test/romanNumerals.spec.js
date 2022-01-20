@@ -4,6 +4,13 @@ function numberToRomanNumeral(number) {
     numeral += "I";
   }
 
+  if (number === 4) {
+    return "IV";
+  }
+  if (number === 5) {
+    return "V";
+  }
+
   return numeral;
 }
 
@@ -17,6 +24,12 @@ describe("romanNumerals", () => {
     });
     it("converts 3 to III", () => {
       expect(numberToRomanNumeral(3)).toEqual("III");
+    });
+    it("converts 4 to IV", () => {
+      expect(numberToRomanNumeral(4)).toEqual("IV");
+    });
+    it("converts 5 to V", () => {
+      expect(numberToRomanNumeral(5)).toEqual("V");
     });
   });
 });
