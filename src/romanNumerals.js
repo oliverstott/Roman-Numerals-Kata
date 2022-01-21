@@ -8,8 +8,8 @@ export function numberToRomanNumeral(number) {
     }
 
     numeral += "X";
-  } else if (number >= 4) {
-    if (number === 4) {
+  } else if (number >= 5 - 1) {
+    if (number === 5 - 1) {
       numeral += NUMERAL_ONE;
     }
 
