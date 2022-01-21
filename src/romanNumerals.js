@@ -5,7 +5,9 @@ export function numberToRomanNumeral(number) {
     if (number === 9) {
       numeral += "I";
     }
+    
     numeral += "X";
+
   } else if (number >= 4) {
     if (number === 4) {
       numeral += "I";
