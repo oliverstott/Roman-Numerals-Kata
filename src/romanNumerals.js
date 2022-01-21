@@ -3,6 +3,11 @@ export function numberToRomanNumeral(number) {
   const NUMERAL_FIVE = "V";
   const NUMERAL_TEN = "X";
 
+  // WHat are these names?!😢 
+  const THRESHOLD_ONE = 1;   
+  const THRESHOLD_FIVE = 5;
+  const THRESHOLD_TEN = 10;
+
   let numeral = "";
 
   if (number >= 9) {
@@ -11,8 +16,8 @@ export function numberToRomanNumeral(number) {
     }
 
     numeral += NUMERAL_TEN;
-  } else if (number >= 5 - 1) {
-    if (number === 5 - 1) {
+  } else if (number >= THRESHOLD_FIVE - THRESHOLD_ONE) {
+    if (number === THRESHOLD_FIVE - THRESHOLD_ONE) {
       numeral += NUMERAL_ONE;
     }
 
