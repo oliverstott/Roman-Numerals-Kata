@@ -10,8 +10,8 @@ export function numberToRomanNumeral(number) {
 
   let numeral = "";
 
-  if (number >= 9) {
-    if (number === 9) {
+  if (number >= THRESHOLD_TEN - 1) {
+    if (number === THRESHOLD_TEN - 1) {
       numeral += NUMERAL_ONE;
     }
 
