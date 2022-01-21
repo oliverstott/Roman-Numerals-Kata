@@ -3,8 +3,7 @@ export function numberToRomanNumeral(number) {
   const NUMERAL_FIVE = "V";
   const NUMERAL_TEN = "X";
 
-  // WHat are these names?!😢 
-  const THRESHOLD_ONE = 1;   
+  const THRESHOLD_ONE = 1;
   const THRESHOLD_FIVE = 5;
   const THRESHOLD_TEN = 10;
 
@@ -16,6 +15,10 @@ export function numberToRomanNumeral(number) {
     }
 
     numeral += NUMERAL_TEN;
+
+    if (number > THRESHOLD_TEN) {
+      numeral += numberToRomanNumeral(number - THRESHOLD_TEN);
+    }
   } else if (number >= THRESHOLD_FIVE - THRESHOLD_ONE) {
     if (number === THRESHOLD_FIVE - THRESHOLD_ONE) {
       numeral += NUMERAL_ONE;
@@ -23,7 +26,7 @@ export function numberToRomanNumeral(number) {
 
     numeral += NUMERAL_FIVE;
 
-    if (number >= 5) {
+    if (number >= THRESHOLD_FIVE) {
       numeral += numberToRomanNumeral(number - 5);
     }
   } else {
