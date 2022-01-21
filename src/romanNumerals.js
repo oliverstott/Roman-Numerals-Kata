@@ -9,7 +9,7 @@ export function numberToRomanNumeral(number) {
 
   let numeral = "";
 
-  if (number >= THRESHOLD_TEN - 1) {
+  const tenThresholdCase = () => {
     if (number === THRESHOLD_TEN - 1) {
       numeral += NUMERAL_ONE;
     }
@@ -19,8 +19,12 @@ export function numberToRomanNumeral(number) {
     if (number > THRESHOLD_TEN) {
       numeral += numberToRomanNumeral(number - THRESHOLD_TEN);
     }
-  } else if (number >= THRESHOLD_FIVE - THRESHOLD_ONE) {
-    if (number === THRESHOLD_FIVE - THRESHOLD_ONE) {
+
+    return numeral;
+  };
+
+  const fiveThresholdCase = () => {
+    if (number === THRESHOLD_FIVE - 1) {
       numeral += NUMERAL_ONE;
     }
 
@@ -29,6 +33,14 @@ export function numberToRomanNumeral(number) {
     if (number >= THRESHOLD_FIVE) {
       numeral += numberToRomanNumeral(number - 5);
     }
+
+    return numeral;
+  };
+
+  if (number >= THRESHOLD_TEN - 1) {
+    numeral += tenThresholdCase();
+  } else if (number >= THRESHOLD_FIVE - 1) {
+    numeral += fiveThresholdCase();
   } else {
     for (let i = 0; i < number; i++) {
       numeral += "I";
