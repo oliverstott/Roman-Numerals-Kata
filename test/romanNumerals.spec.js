@@ -17,5 +17,20 @@ describe("romanNumerals", () => {
     it("converts 5 to V", () => {
       expect(numberToRomanNumeral(5)).toEqual("V");
     });
+    it("converts 6 to VI", () => {
+      expect(numberToRomanNumeral(6)).toEqual("VI");
+    });
+    it("converts 7 to VII", () => {
+      expect(numberToRomanNumeral(7)).toEqual("VII");
+    });
+    it("converts 8 to VIII", () => {
+      expect(numberToRomanNumeral(8)).toEqual("VIII");
+    });
+    it("converts 9 to IX", () => {
+      expect(numberToRomanNumeral(9)).toEqual("IX");
+    });
+    it("converts 10 to X", () => {
+      expect(numberToRomanNumeral(10)).toEqual("X");
+    });
   });
 });
