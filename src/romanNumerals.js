@@ -1,5 +1,8 @@
 export function numberToRomanNumeral(number) {
   const NUMERAL_ONE = "I";
+  const NUMERAL_FIVE = "V";
+  const NUMERAL_TEN = "X";
+
   let numeral = "";
 
   if (number >= 9) {
@@ -7,13 +10,13 @@ export function numberToRomanNumeral(number) {
       numeral += NUMERAL_ONE;
     }
 
-    numeral += "X";
+    numeral += NUMERAL_TEN;
   } else if (number >= 5 - 1) {
     if (number === 5 - 1) {
       numeral += NUMERAL_ONE;
     }
 
-    numeral += "V";
+    numeral += NUMERAL_FIVE;
 
     if (number >= 5) {
       numeral += numberToRomanNumeral(number - 5);
